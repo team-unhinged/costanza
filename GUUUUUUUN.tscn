@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GUUUUUUUN.gd" type="Script" id=1]
+[ext_resource path="res://assets/bbus_mesh.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://GUUUN.gd" type="Script" id=3]
+[ext_resource path="res://assets/crosshair.png" type="Texture" id=4]
+
+[node name="Spatial" type="Spatial" index="0"]
+
+script = ExtResource( 1 )
+MOUSE_SENSITIVITY = 1
+
+[node name="Camera" type="Camera" parent="." index="0"]
+
+transform = Transform( 0.999934, 0.0105749, -0.00439982, -0.0105731, 0.999944, 0.000446355, 0.00440429, -0.000399807, 0.99999, 0, 0, 0 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 110.0
+size = 1.0
+near = 0.05
+far = 100.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="GUUUN" type="MeshInstance" parent="Camera" index="0"]
+
+transform = Transform( 0.0100406, 0.0116215, -0.0475829, -0.00886339, 0.0482016, 0.00990235, 0.048173, 0.0064464, 0.0117396, 0.304056, -0.223051, -0.244737 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 2 )
+skeleton = NodePath("..")
+material/0 = null
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="crosshair" type="Sprite3D" parent="Camera" index="1"]
+
+transform = Transform( 1, 2.62162e-010, 9.31323e-010, -6.62794e-010, 1, 2.91038e-011, -1.86265e-009, 0, 1, -0.00687661, 0.000624234, -1.56133 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 4 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+
+
